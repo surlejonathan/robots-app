@@ -1,51 +1,56 @@
-import { useEffect } from 'react';
-import { connect } from 'react-redux';
-import Scroll from '../components/Scroll';
-import SearchBox from '../components/SearchBox';
-import CardList from '../components/CardList';
-import ErrorBoundry from '../components/ErrorBoundry';
-import { requestRobots, setSearchField } from '../redux/searchRobots/actions';
+import { useEffect } from 'react'
+import { connect } from 'react-redux'
+import Scroll from '../components/Scroll'
+import SearchBox from '../components/SearchBox'
+import CardList from '../components/CardList'
+import ErrorBoundry from '../components/ErrorBoundry'
+import { requestRobots, setSearchField } from '../redux/searchRobots/actions'
 
 const mapStateToProps = (state) => ({
-  searchField: state.searchRobots.searchField,
-  robots: state.requestRobots.robots,
-  isPending: state.requestRobots.isPending,
-});
+    searchField: state.searchRobots.searchField,
+    robots: state.requestRobots.robots,
+    isPending: state.requestRobots.isPending,
+})
 
 const mapDispatchToProps = (dispatch) => ({
-  onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
-  onRequestRobots: () => dispatch(requestRobots()),
-});
+    onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+    onRequestRobots: () => dispatch(requestRobots()),
+})
 
-const App = (props) => {
-  const { searchField, onSearchChange, robots, onRequestRobots, isPending } =
-    props;
+function App(props) {
+    const {
+        searchField,
+        onSearchChange,
+        robots,
+        onRequestRobots,
+        isPending,
+    } = props
 
-  useEffect(() => {
-    onRequestRobots();
-  }, [onRequestRobots]);
+    useEffect(() => {
+        onRequestRobots()
+    }, [onRequestRobots])
 
-  const filteredRobots = robots.filter((robot) => {
-    return robot.name.toLowerCase().startsWith(searchField.toLowerCase());
-  });
+    const filteredRobots = robots.filter((robot) =>
+        robot.name.toLowerCase().startsWith(searchField.toLowerCase())
+    )
 
-  return (
-    <div className="tc">
-      <div>
-        <h1 className="f1">RoboFriends</h1>
-        <SearchBox onSearchChange={onSearchChange} />
-        {isPending ? (
-          <h1>Loading...</h1>
-        ) : (
-          <Scroll>
-            <ErrorBoundry>
-              <CardList robots={filteredRobots} />
-            </ErrorBoundry>
-          </Scroll>
-        )}
-      </div>
-    </div>
-  );
-};
+    return (
+        <div className="tc">
+            <div>
+                <h1 className="f1">RoboFriends</h1>
+                <SearchBox onSearchChange={onSearchChange} />
+                {isPending ? (
+                    <h1>Loading...</h1>
+                ) : (
+                    <Scroll>
+                        <ErrorBoundry>
+                            <CardList robots={filteredRobots} />
+                        </ErrorBoundry>
+                    </Scroll>
+                )}
+            </div>
+        </div>
+    )
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App)

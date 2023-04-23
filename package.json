@@ -1,47 +1,48 @@
 {
-  "name": "robots-app",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "_lint": "eslint --config ./.eslintrc.json --ext js --ext jsx",
-    "lint": "npm run _lint -- ./src/",
-    "lint:fix": "npm run _lint -- --fix ./src/",
-    "format": "prettier --write './**/*.{js,jsx,css,scss,md,json}' --config ./.prettierrc",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.9.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.0.5",
-    "redux": "^4.2.1",
-    "tachyons": "4.12.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "^8.0.3",
-    "lint-staged": ">=10",
-    "prettier": "^2.8.8",
-    "vite": "^4.2.0"
-  },
-  "lint-staged": {
-    "*.{js,css,ts,tsx,jsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
-  }
+    "name": "robots-app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "_lint": "eslint --config ./.eslintrc.json --ext js --ext jsx",
+        "lint": "npm run _lint -- ./src/",
+        "lint:fix": "npm run _lint -- --fix ./src/",
+        "format": "prettier --write './**/*.{js,jsx,css,scss,md,json}' --config ./.prettierrc",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.9.3",
+        "eslint-plugin-node": "^11.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-redux": "^8.0.5",
+        "redux": "^4.2.1",
+        "tachyons": "4.12.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "@vitejs/plugin-react": "^3.1.0",
+        "eslint": "^8.2.0",
+        "eslint-config-airbnb": "19.0.4",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "husky": "^8.0.3",
+        "lint-staged": ">=10",
+        "prettier": "^2.8.8",
+        "vite": "^4.2.0"
+    },
+    "lint-staged": {
+        "*.{js,css,ts,tsx,jsx}": [
+            "prettier --write",
+            "eslint --fix"
+        ]
+    }
 }

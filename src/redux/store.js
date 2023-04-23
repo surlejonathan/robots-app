@@ -1,11 +1,11 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { searchRobots, requestRobots } from "./searchRobots/reducers";
+import { configureStore } from '@reduxjs/toolkit'
+import { searchRobots, requestRobots } from './searchRobots/reducers'
 
 const store = configureStore({
-  reducer: {
-    searchRobots,
-    requestRobots
-  }
-});
+    reducer: {
+        searchRobots,
+        requestRobots,
+    },
+})
 
-export default store;
+export default store
