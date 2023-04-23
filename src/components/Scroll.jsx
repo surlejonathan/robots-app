@@ -1,6 +1,7 @@
 import React from "react";
 
 const Scroll = ({ children }) => {
+  var y = "elle";
   return (
     <div
       style={{ height: "800px", paddingBottom: "50px" }}

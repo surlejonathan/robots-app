@@ -1,23 +1,23 @@
-import { Component } from 'react'
+import { Component } from "react";
 
 class ErrorBoundry extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      hasError: false,
-    }
+      hasError: false
+    };
   }
 
   componentDidCatch(error, info) {
-    this.setState({ hasError: true })
+    this.setState({ hasError: true });
   }
 
   render() {
     if (this.state.hasError) {
-      return <h1>Oops. That is not good</h1>
+      return <h1>Oops. That is not good</h1>;
     }
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default ErrorBoundry
+export default ErrorBoundry;
