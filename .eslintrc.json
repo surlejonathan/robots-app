@@ -19,6 +19,7 @@
     "react/prop-types": {
       "enabled": false
     },
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-console": 2
   }
 }
