@@ -1,20 +1,20 @@
-import { useState, useEffect } from "react";
-import Scroll from "../components/Scroll";
-import SearchBox from "../components/SearchBox";
-import CardList from "../components/CardList";
-import ErrorBoundry from "../components/ErrorBoundry";
-import { connect } from "react-redux";
-import { requestRobots, setSearchField } from "../redux/searchRobots/actions";
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import Scroll from '../components/Scroll';
+import SearchBox from '../components/SearchBox';
+import CardList from '../components/CardList';
+import ErrorBoundry from '../components/ErrorBoundry';
+import { requestRobots, setSearchField } from '../redux/searchRobots/actions';
 
 const mapStateToProps = (state) => ({
   searchField: state.searchRobots.searchField,
   robots: state.requestRobots.robots,
-  isPending: state.requestRobots.isPending
+  isPending: state.requestRobots.isPending,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
-  onRequestRobots: () => dispatch(requestRobots())
+  onRequestRobots: () => dispatch(requestRobots()),
 });
 
 const App = (props) => {
@@ -23,7 +23,7 @@ const App = (props) => {
 
   useEffect(() => {
     onRequestRobots();
-  }, []);
+  }, [onRequestRobots]);
 
   const filteredRobots = robots.filter((robot) => {
     return robot.name.toLowerCase().startsWith(searchField.toLowerCase());

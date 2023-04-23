@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "_lint": "eslint --config ./.eslintrc.json --ext js --ext jsx --ext",
+    "_lint": "eslint --config ./.eslintrc.json --ext js --ext jsx",
     "lint": "npm run _lint -- ./src/",
     "lint:fix": "npm run _lint -- --fix ./src/",
     "format": "prettier --write './**/*.{js,jsx,css,scss,md,json}' --config ./.prettierrc",
@@ -41,7 +41,7 @@
   "lint-staged": {
     "*.{js,css,ts,tsx,jsx}": [
       "prettier --write",
-      "yarn _lint"
+      "eslint --fix"
     ]
   }
 }
