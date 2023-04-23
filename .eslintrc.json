@@ -20,6 +20,6 @@
       "enabled": false
     },
     "prettier/prettier": "error",
-    "console": "error"
+    "no-console": "error"
   }
 }
