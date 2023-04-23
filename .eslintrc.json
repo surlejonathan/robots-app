@@ -20,6 +20,22 @@
       "enabled": false
     },
     "prettier/prettier": "error",
-    "no-console": "error"
+    "no-console": 2,
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
+    "no-continue": "off",
+    "no-shadow": "off",
+    "no-use-before-define": "off",
+    "no-undef": "off",
+    "no-unused-expressions": "off",
+    "no-useless-constructor": "off",
+    "no-useless-return": "off",
+    "no-useless-catch": "off",
+    "no-useless-escape": "off",
+    "no-useless-computed-key": "off"
   }
 }
