@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https:/surlejonathan.github.io/robots-app",
+    "homepage": "https:/surlejonathan.github.io/robots-app/",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
@@ -12,9 +12,7 @@
         "lint": "npm run _lint -- ./src/",
         "lint:fix": "npm run _lint -- --fix ./src/",
         "format": "prettier --write './**/*.{js,jsx,css,scss,md,json}' --config ./.prettierrc",
-        "prepare": "husky install",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "prepare": "husky install"
     },
     "dependencies": {
         "@reduxjs/toolkit": "^1.9.3",
