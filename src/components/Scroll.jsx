@@ -3,7 +3,6 @@ function Scroll({ children }) {
         <div
             style={{
                 height: '800px',
-                paddingBottom: '50px',
             }}
             className="overflow-y-scroll ba bw3"
         >

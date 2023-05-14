@@ -9,7 +9,6 @@
         "airbnb",
         "airbnb/hooks",
         "prettier",
-        "eslint-config-prettier",
         "plugin:react/jsx-runtime"
     ],
     "overrides": [],
@@ -19,8 +18,10 @@
     },
     "plugins": ["react", "prettier"],
     "rules": {
-        "react/prop-types": 0,
+        "react/prop-types": "off",
         "default-param-last": "off",
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "no-console": "error",
+        "react/function-component-definition": "off"
     }
 }
